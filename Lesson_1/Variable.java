@@ -1,21 +1,21 @@
 public class Variable {
-	public static void main (String[] args) {
-		byte kol_yader = 4;
-		short operativka = 8;
+	public static void main(String[] args) {
+		byte numberOfCores = 4;
+		short ram = 8;
 		int ssd = 500;
-		long obem_kesha = 4;
-		float interface = (float)3.5;
-		double chastota_proca = 3.4;
+		long amountOfCache = 4;
+		float frequencyOfProcessMin = 2.1f;
+		double frequencyOfProcessMax =3.4;
 		char processor = 'I';
-		boolean isoptical_privod = false;
+		boolean isopticalDrive = false;
 
-		System.out.println(kol_yader);
-		System.out.println(operativka);
+		System.out.println(numberOfCores);
+		System.out.println(ram);
 		System.out.println(ssd);
-		System.out.println(obem_kesha);
-		System.out.println(interface);
-		System.out.println(chastota_proca);
+		System.out.println(amountOfCache);
+		System.out.println(frequencyOfProcessMin);
+		System.out.println(frequencyOfProcessMax);
 		System.out.println(processor);
-		System.out.println(isoptical_privod);
+		System.out.println(isopticalDrive);
 	}
 }

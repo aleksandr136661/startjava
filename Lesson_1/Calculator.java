@@ -1,38 +1,28 @@
 public class Calculator {
-	public static void main (String[] args) {
+	public static void main(String[] args) {
 		int a = 3;
 		int b = 2;
 		double result;
-		char sum = '+';
-		char minus = '-';
-		char ymn = '*';
-		char delenie = '/';
-		char stepen = '^';
-		char ostatok = '%';
-		if (sum == '+') {
+		char matSign = '+';
+		if (matSign == '+') {
 			result = a + b;
 			System.out.println("a+b=" + result);
-		}
-		if (minus == '-') {
+		} else if (matSign == '-') {
 			result = a - b;
 			System.out.println("a-b=" + result);
-		}
-		if (ymn == '*') {
+		} else if (matSign == '*') {
 			result = a * b;
-			System.out.println("a*b=" + result);
-		}
-		if (delenie == '/') {
+		 	System.out.println("a*b=" + result);
+		} else if (matSign == '/') {
 			result = a / b;
 			System.out.println("a/b=" + result);
-		}
-		if (stepen == '^') {
+		} else if (matSign == '^') {
 			result = 1;
-			for (int i = 1;i <= b;i++) {
-				result = result * a;
+			for (int i = 1; i <= b; i++) {
+				result *= a;
 			}
 			System.out.println("a^b=" + result);
-		}
-		if (ostatok == '%') {
+		} else if (matSign == '%') {
 			result = a % b;
 			System.out.println("a%b=" + result);
 		}
