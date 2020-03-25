@@ -8,20 +8,27 @@ public class ConditionalStatement {
 		if (isMale) {
 			System.out.println("Пол мужской");
 		}
-		boolean isNotMale = true;
-		if (isNotMale) {
+		
+		if (!isMale) {
 			System.out.println("Пол не мужской");
 		}
+
 		double height = 1.75;
 		if (height < 1.80) {
 			System.out.println("Рост ниже 180");
 		} else {
 			System.out.println("Рост больше 180");
 		}
-		char letter = 'M';
-		if (letter == 'M') {
+
+		char firstNameLetter = 'M';
+		if (firstNameLetter == 'M') {
 			System.out.println("Первая буква М");
-		} else if (letter == 'I') {
+		} else if (firstNameLetter == 'I') {
+
+		char firstNameLetter = 'M';
+		if (firstNameLetter == 'M') {
+			System.out.println("Первая буква М");
+		} else if (firstNameLetter == 'I') {
 			System.out.println("Первая буква I");
 		} else {
 			System.out.println("Таких букв нет");

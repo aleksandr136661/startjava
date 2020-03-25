@@ -7,7 +7,7 @@ public class Variable {
 		float frequencyOfProcessMin = 2.1f;
 		double frequencyOfProcessMax =3.4;
 		char processor = 'I';
-		boolean isopticalDrive = false;
+		boolean isOpticalDrive = false;
 
 		System.out.println(numberOfCores);
 		System.out.println(ram);
@@ -16,6 +16,6 @@ public class Variable {
 		System.out.println(frequencyOfProcessMin);
 		System.out.println(frequencyOfProcessMax);
 		System.out.println(processor);
-		System.out.println(isopticalDrive);
+		System.out.println(isOpticalDrive);
 	}
 }

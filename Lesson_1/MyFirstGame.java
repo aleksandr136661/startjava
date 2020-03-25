@@ -13,7 +13,7 @@ public class MyFirstGame {
 			System.out.println("Число не пренадлежит диапозону (0 100]");
 		}
 		if ((answer > 0) && (answer <= 100)) {
-			do{
+			do {
 				if (hiddenNumber < answer) {
 					System.out.println("Введеное вами число больше того, что загадал компьютер");
 					answer--;

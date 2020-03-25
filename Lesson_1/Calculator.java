@@ -4,6 +4,7 @@ public class Calculator {
 		int b = 2;
 		double result;
 		char matSign = '+';
+
 		if (matSign == '+') {
 			result = a + b;
 			System.out.println("a+b=" + result);
