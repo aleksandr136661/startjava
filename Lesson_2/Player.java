@@ -6,8 +6,8 @@ public class Player {
 		this.name = name;
 	}
 
-	public String getName(){
-		return this.name;
+	public String getName() {
+		return name;
 	}
 
 	public void setNumber(int number) {
@@ -15,6 +15,6 @@ public class Player {
 	}
 
 	public int getNumber() {
-		return this.number;
+		return number;
 	}
 }

@@ -3,37 +3,44 @@ import java.util.Random;
 
 public class GuessNumber {
 	private int guessNumber;
-	private boolean continuePlay;
 	private Scanner scan;
+	private Player player1;
+	private Player player2;
 
-	public GuessNumber() {
+	public GuessNumber(Player player1, Player player2) {
 		scan = new Scanner(System.in);
+		this.player1 = player1;
+		this.player2 = player2;
 	}
 
-	public void play(Player player1, Player player2) {
-		continuePlay = true;
+	public void play() {
 		Random random = new Random();
 		guessNumber = random.nextInt(100) + 1;
 		do {
 			System.out.println(player1.getName() + ", введите число: ");
 			player1.setNumber(scan.nextInt());
-			checkNumber(player1);
-			if (continuePlay) {
+			if (!checkNumber(player1)) {
 				System.out.println(player2.getName() + ", введите число: ");
 				player2.setNumber(scan.nextInt());
-				checkNumber(player2);
+			} else {
+				break;
 			}
-		} while (continuePlay);
+		} while (checkNumber(player2));
 	}
 
-	private void checkNumber(Player player) {
+	private boolean checkNumber(Player player) {
+		boolean result = false;
+
 		if (player.getNumber() > guessNumber) {
 			System.out.println("Вы ввели число, которое больше числа, загаданного компьютером.");
+			result = false;
 		} else if (player.getNumber() < guessNumber) {
 			System.out.println("Вы ввели число, которое меньше числа, загаданного компьютером.");
+			result = false;
 		} else {
 			System.out.println(player.getName() + ", Вы угадали и победили!");
-			continuePlay = false;
+			result = true;
 		}
+		return result;
 	}
 }

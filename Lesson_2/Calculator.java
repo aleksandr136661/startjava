@@ -28,7 +28,7 @@ public class Calculator {
 		this.operation = operation;
 	}
 
-	public int calculate() {
+	public void calculate() {
 		int result;
 		switch (operation) {
 			case '+':
@@ -60,9 +60,6 @@ public class Calculator {
 				break;
 			default:
 				System.out.println("Введена неизвестная операция");
-				result = 0;
-				break;
 		}
-		return result;
 	}
 }
