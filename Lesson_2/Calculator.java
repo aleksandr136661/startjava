@@ -5,27 +5,27 @@ public class Calculator {
 	private char operation;
 
 	public int getFirstNumber() {
-		return this.firstNumber;
+		return firstNumber;
 	}
 
 	public void setFirstNumber(int firstNumber) {
-		this.firstNumber = firstNumber;
+		firstNumber = firstNumber;
 	}
 
 	public int getSecondNumber() {
-		return this.secondNumber;
+		return secondNumber;
 	}
 
 	public void setSecondNumber(int secondNumber) {
-		this.secondNumber = secondNumber;
+		secondNumber = secondNumber;
 	}
 
 	public char getOperation() {
-		return this.operation;
+		return operation;
 	}
 
 	public void setOperation(char operation) {
-		this.operation = operation;
+		operation = operation;
 	}
 
 	public void calculate() {

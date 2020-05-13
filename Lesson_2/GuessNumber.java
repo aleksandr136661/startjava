@@ -33,10 +33,8 @@ public class GuessNumber {
 
 		if (player.getNumber() > guessNumber) {
 			System.out.println("Вы ввели число, которое больше числа, загаданного компьютером.");
-			result = false;
 		} else if (player.getNumber() < guessNumber) {
 			System.out.println("Вы ввели число, которое меньше числа, загаданного компьютером.");
-			result = false;
 		} else {
 			System.out.println(player.getName() + ", Вы угадали и победили!");
 			result = true;
