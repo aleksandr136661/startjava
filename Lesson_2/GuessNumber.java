@@ -12,16 +12,19 @@ public class GuessNumber {
 		this.player1 = player1;
 		this.player2 = player2;
 	}
+	
+	public void inputNumber( Player player){
+		System.out.println(player.getName() + ", введите число: ");
+			player.setNumber(scan.nextInt());
+	}
 
 	public void play() {
 		Random random = new Random();
 		guessNumber = random.nextInt(100) + 1;
 		do {
-			System.out.println(player1.getName() + ", введите число: ");
-			player1.setNumber(scan.nextInt());
+			inputNumber(player1);
 			if (!checkNumber(player1)) {
-				System.out.println(player2.getName() + ", введите число: ");
-				player2.setNumber(scan.nextInt());
+				inputNumber(player2);
 			} else {
 				break;
 			}
