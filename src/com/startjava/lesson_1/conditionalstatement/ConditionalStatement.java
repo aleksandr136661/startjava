@@ -1,3 +1,5 @@
+package com.startjava.lesson_1.conditionalstatement;
+
 public class ConditionalStatement {
 	public static void main(String[] args) {
 		int age = 29;
@@ -19,11 +21,6 @@ public class ConditionalStatement {
 		} else {
 			System.out.println("Рост больше 180");
 		}
-
-		char firstNameLetter = 'M';
-		if (firstNameLetter == 'M') {
-			System.out.println("Первая буква М");
-		} else if (firstNameLetter == 'I') {
 
 		char firstNameLetter = 'M';
 		if (firstNameLetter == 'M') {
