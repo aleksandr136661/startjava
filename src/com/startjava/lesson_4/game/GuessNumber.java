@@ -28,10 +28,10 @@ public class GuessNumber {
 		do {
 			inputNumber(player1);
 			int i = 0;
-			player1.saveNumberPl1[i] = player1.getNumber();
+			player1.saveNumber[i] = player1.getNumber();
 			if (!checkNumber(player1)) {
 				inputNumber(player2);
-				player2.saveNumberPl2[i] = player2.getNumber();
+				player2.saveNumber[i] = player2.getNumber();
 				i++;
 			} else {
 				break;

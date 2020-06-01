@@ -21,8 +21,8 @@ public class GuessNumberTest {
 					attempt--;
 				} while((attempt!=0) &&(game.res==false));
 				for (int i = 0; i<10; i++) {
-					System.out.print(player1.saveNumberPl1[i]);
-					System.out.print(player2.saveNumberPl2[i]);
+					System.out.print(player1.saveNumber[i]);
+					System.out.print(player2.saveNumber[i]);
 				}
 				System.out.println("Хотите продолжить? [да/нет]: ");
 				answer = scan.next();
