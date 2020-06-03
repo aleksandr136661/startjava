@@ -3,8 +3,6 @@ package com.startjava.lesson_4.calculator;
 public class Calculator {
 
     private String example;
-    private String array[];
-    private String operation;
 
     public String getExample() {
         return example;
