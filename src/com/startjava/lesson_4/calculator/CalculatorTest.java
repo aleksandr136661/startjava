@@ -2,7 +2,6 @@ package com.startjava.lesson_4.calculator;
 
 import java.util.Scanner;
 
-
 public class CalculatorTest {
 
 	public static void main(String[] args) {
@@ -13,38 +12,8 @@ public class CalculatorTest {
 
 		do {
 			System.out.print("Введите математическое выражение через пробел: ");
-			String example = scan.nextLine();
-			String array[] = example.split(" ");
-			String operation =array[1];
-			double result;
-			switch (operation.charAt(0)) {
-				case '+':
-					result = Integer.parseInt(array[0]) + Integer.parseInt(array[2]);;
-					System.out.println(Integer.parseInt(array[0]) + " + " + Integer.parseInt(array[2]) + " = " + result);
-					break;
-				case '-':
-					result = Integer.parseInt(array[0]) - Integer.parseInt(array[2]);
-					System.out.println(Integer.parseInt(array[0]) + " - " + Integer.parseInt(array[2]) + " = " + result);
-					break;
-				case '*':
-					result = Integer.parseInt(array[0]) * Integer.parseInt(array[2]);
-					System.out.println(Integer.parseInt(array[0]) + " * " + Integer.parseInt(array[2]) + " = " + result);
-					break;
-				case '/':
-					result = Integer.parseInt(array[0]) / Integer.parseInt(array[2]);
-					System.out.println(Integer.parseInt(array[0]) + " / " + Integer.parseInt(array[2]) + " = " + result);
-					break;
-				case '%':
-					result = Integer.parseInt(array[0]) % Integer.parseInt(array[2]);
-					System.out.println(Integer.parseInt(array[0]) + " % " + Integer.parseInt(array[2]) + " = " + result);
-					break;
-				case '^':
-					result = Math.pow(Integer.parseInt(array[0]),Integer.parseInt(array[2]));
-					System.out.println(Integer.parseInt(array[0]) + " ^ " + Integer.parseInt(array[2]) + " = " + result);
-					break;
-				default:
-					System.out.println("Введена неизвестная операция");
-			}
+			calculator.setExample(scan.nextLine());
+			calculator.calculate();
 			do {
 				System.out.println("Хотите продолжить? [Да/Нет]: ");
 				answer = scan.nextLine();

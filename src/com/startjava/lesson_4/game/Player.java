@@ -3,8 +3,8 @@ package com.startjava.lesson_4.game;
 public class Player {
 	private String name;
 	private int number;
-	public int[] saveNumber = new int [10];
-	//public int[] saveNumberPl2 = new int [10];
+	private int[] enteredNums = new int[10];
+	private int i = 0;
 
 	public Player(String name) {
 		this.name = name;
@@ -21,5 +21,13 @@ public class Player {
 	public int getNumber() {
 		return number;
 	}
-}
 
+	public int[] getEnteredNums() {
+		return enteredNums;
+	}
+
+	public void setEnteredNums(int enteredNum) {
+			this.enteredNums[i] = enteredNum;
+			i++;
+	}
+}
