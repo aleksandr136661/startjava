@@ -18,7 +18,7 @@ public class Player {
 	}
 
 	public void setEnteredNum(int enteredNum) {
-			enteredNums[attempt] = enteredNum;
-            attempt++;
+		enteredNums[attempt] = enteredNum;
+		attempt++;
 	}
 }
