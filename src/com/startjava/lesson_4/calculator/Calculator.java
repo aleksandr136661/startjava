@@ -2,48 +2,48 @@ package com.startjava.lesson_4.calculator;
 
 public class Calculator {
 
-    private String example;
+    private String srcMathExp;
+    private double result;
 
-    public String getExample() {
-        return example;
+    public void setResult(double result) {
+        this.result = result;
+    }
+
+    public double getResult() {
+        return result;
     }
 
     public void setExample(String example) {
-        this.example = example;
+        this.srcMathExp = example;
     }
 
     public void calculate() {
-        String array[] = example.split(" ");
-        String operation =array[1];
-        double result;
-        switch (operation.charAt(0)) {
+
+        String splitMatExp[] = srcMathExp.split(" ");
+        char operation = splitMatExp[1].charAt(0);
+        int variable1 = Integer.parseInt(splitMatExp[0]);
+        int variable2 = Integer.parseInt(splitMatExp[2]);
+        switch (operation) {
             case '+':
-                result = Integer.parseInt(array[0]) + Integer.parseInt(array[2]);;
-                System.out.println(Integer.parseInt(array[0]) + " + " + Integer.parseInt(array[2]) + " = " + result);
+                setResult(variable1 + variable2);
                 break;
             case '-':
-                result = Integer.parseInt(array[0]) - Integer.parseInt(array[2]);
-                System.out.println(Integer.parseInt(array[0]) + " - " + Integer.parseInt(array[2]) + " = " + result);
+                setResult(variable1 - variable2);
                 break;
             case '*':
-                result = Integer.parseInt(array[0]) * Integer.parseInt(array[2]);
-                System.out.println(Integer.parseInt(array[0]) + " * " + Integer.parseInt(array[2]) + " = " + result);
+                setResult(variable1 * variable2);
                 break;
             case '/':
-                result = Integer.parseInt(array[0]) / Integer.parseInt(array[2]);
-                System.out.println(Integer.parseInt(array[0]) + " / " + Integer.parseInt(array[2]) + " = " + result);
+                setResult(variable1 / variable2);
                 break;
             case '%':
-                result = Integer.parseInt(array[0]) % Integer.parseInt(array[2]);
-                System.out.println(Integer.parseInt(array[0]) + " % " + Integer.parseInt(array[2]) + " = " + result);
+                setResult(variable1 % variable2);
                 break;
             case '^':
-                result = Math.pow(Integer.parseInt(array[0]),Integer.parseInt(array[2]));
-                System.out.println(Integer.parseInt(array[0]) + " ^ " + Integer.parseInt(array[2]) + " = " + result);
+                setResult(Math.pow(variable1,variable2));
                 break;
             default:
                 System.out.println("Введена неизвестная операция");
         }
     }
 }
-

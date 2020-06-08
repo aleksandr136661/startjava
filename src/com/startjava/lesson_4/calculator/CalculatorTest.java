@@ -14,6 +14,7 @@ public class CalculatorTest {
 			System.out.print("Введите математическое выражение через пробел: ");
 			calculator.setExample(scan.nextLine());
 			calculator.calculate();
+			System.out.println(calculator.getResult());
 			do {
 				System.out.println("Хотите продолжить? [Да/Нет]: ");
 				answer = scan.nextLine();
