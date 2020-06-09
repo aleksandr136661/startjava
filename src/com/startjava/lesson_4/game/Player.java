@@ -21,4 +21,7 @@ public class Player {
 		enteredNums[attempt] = enteredNum;
 		attempt++;
 	}
+	public int getAttemptCount() {
+		return attempt;
+	}
 }

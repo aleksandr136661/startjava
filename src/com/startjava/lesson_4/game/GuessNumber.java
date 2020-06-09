@@ -1,5 +1,6 @@
 package com.startjava.lesson_4.game;
 
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Random;
 
@@ -17,21 +18,19 @@ public class GuessNumber {
 		this.player2 = player2;
 	}
 
-	private void inputNumber(Player player) {
-		System.out.println(player.getName() + ", введите число: ");
-		player.getEnteredNums()[num] = scan.nextInt();
-	}
-
 	public void play() {
 		Random random = new Random();
 		guessNumber = random.nextInt(100) + 1;
+
 		do {
 			if (attempt > 0) {
 				System.out.println(player1.getName() + " у вас " + attempt + " попыток");
 				inputNumber(player1);
+				System.out.println(guessNumber);
 				if (!checkNumber(player1)) {
 					System.out.println(player2.getName() + " у вас " + attempt + " попыток");
 					inputNumber(player2);
+					System.out.println(guessNumber);
 					num++;
 					attempt--;
 				} else {
@@ -41,6 +40,13 @@ public class GuessNumber {
 		} while (!checkNumber(player2));
 		printAttempts(player1);
 		printAttempts(player2);
+		Arrays.fill(player1.getEnteredNums(),0,player1.getAttemptCount(),0);
+		Arrays.fill(player2.getEnteredNums(),0,player2.getAttemptCount(),0);
+	}
+
+	private void inputNumber(Player player) {
+		System.out.println(player.getName() + ", введите число: ");
+		player.setEnteredNum(scan.nextInt());
 	}
 
 	private boolean checkNumber(Player player) {
@@ -63,8 +69,9 @@ public class GuessNumber {
 	}
 
 	private void printAttempts(Player player) {
-		for (int l = 0; l < 10; l++) {
-			System.out.print(player.getEnteredNums()[l]);
+		int[] copyEnteredNums = Arrays.copyOf(player.getEnteredNums(), player.getAttemptCount());
+		for (int l = 0; l < copyEnteredNums.length; l++) {
+			System.out.print(copyEnteredNums[l] + " ");
 		}
 	}
 }
