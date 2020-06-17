@@ -10,9 +10,9 @@ SELECT * FROM Robot ORDER BY mark DESC;
 
 SELECT * FROM Robot WHERE launch = (SELECT MIN (launch) FROM Robot);
 
-SELECT * FROM robot WHERE kaijuKill >= SELECT AVG(kaijuKill) FROM Robot;
+SELECT * FROM Robot WHERE kaijuKill = (SELECT MAX(kaijuKill) FROM Robot);
 
-SELECT * FROM robot WHERE kaijuKill < SELECT AVG(kaijuKill) FROM Robot;
+SELECT * FROM Robot WHERE kaijuKill = (SELECT MIN(kaijuKill) FROM Robot);
 
 SELECT AVG(weight) FROM Robot;
 
